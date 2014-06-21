@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['sshfs_5fstart_2esh',['sshfs_start.sh',['../sshfs__start_8sh.html',1,'']]],
-  ['sshfs_5fstop_2esh',['sshfs_stop.sh',['../sshfs__stop_8sh.html',1,'']]],
-  ['start',['start',['../sshfs__start_8sh.html#af8fa59992209e36dccb3eefb0f75531f',1,'sshfs_start.sh']]],
-  ['stop',['stop',['../sshfs__stop_8sh.html#a8b6fc76a620d7557d06e9a11a9ffb509',1,'sshfs_stop.sh']]]
+  ['else',['else',['../add_picosafe_8php.html#a94628e2dce54b6d939370f63eeb46947',1,'else():&#160;addPicosafe.php'],['../remove_picosafe_8php.html#abb4107be03e57d85bafc79a041fa5625',1,'else():&#160;removePicosafe.php']]],
+  ['exit',['exit',['../add_picosafe_8php.html#a6733eb5f605d09eaede9845835d71c4e',1,'addPicosafe.php']]]
 ];
