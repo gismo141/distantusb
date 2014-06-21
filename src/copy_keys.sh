@@ -3,7 +3,7 @@ set timeout 9
 set hostname [lindex $argv 0]
 set password [lindex $argv 1]
 
-spawn sh -c "ssh-copy-id -i /home/picosafe/.ssh/id_rsa.pub  $hostname"
+spawn sh -c "ssh-copy-id -i /home/picosafe/.ssh/distantusb_rsa.pub  $hostname"
 
 expect {
     "assword: " {

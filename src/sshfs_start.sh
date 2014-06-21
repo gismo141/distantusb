@@ -3,14 +3,14 @@
 #
 # Author: Michael Riedel, 2014
 #
-# This script mounts distant picosafes with sshfs
+# This script adds distant picosafes with sshfs
 #
 #####
 
 usage()
 {
-	echo "sshfs_start.sh <share_name>,<user>@<host>"
-	echo "              [<share_name>,<user>@<host>] (optional)"
+	echo "Usage : sshfs_start.sh <share_name>,<user>@<host>"
+	echo "                       [<share_name>,<user>@<host>] (optional)"
 	exit
 }
 

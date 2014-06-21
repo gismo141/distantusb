@@ -3,20 +3,32 @@
 #
 # Author: Michael Riedel, 2014
 #
-# This script unmounts distant picosafes from sshfs
-#
-# usage: ./sshfs_start.sh <share_name> [<share_name>]
+# This script removes distant picosafes with sshfs
 #
 #####
-for ARG in "$@"
-do
-	# split arguments in share_name and user_host
-	share_name=${ARG%,*}
-	user_host=${ARG#*,}
-	
-	# now do the magic
-	echo unmounting $share_name
-	fusermount -u /home/picosafe/shares/$share_name
-	echo deleting mountpoint $share_name
-	rmdir /home/picosafe/shares/$share_name
-done
+
+usage()
+{
+	echo "Usage : sshfs_stop.sh <share_name>"
+	echo "                      [<share_name>] (optional)"
+	exit
+}
+
+stop()
+{
+	for share_name in "$@"
+	do
+		echo unmounting $share_name
+		fusermount -u /home/picosafe/shares/$share_name
+		echo deleting mountpoint $share_name
+		rmdir /home/picosafe/shares/$share_name
+	done
+}
+
+if [ "$#" -lt 1 ]
+then
+	echo "Parameter missing!"
+	usage
+else
+	stop $@
+fi

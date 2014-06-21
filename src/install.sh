@@ -10,8 +10,8 @@
 # usage: ./install.sh
 #
 #####
-wget -q --tries=10 --timeout=20 http://google.com
-if [[ $? -eq 0 ]]; then
+install()
+{
 	echo "Changing owner of all files and subfolders in this folder ..."
 	sudo chown -R picosafe *
 	sudo chgrp -R picosafe *
@@ -50,12 +50,18 @@ if [[ $? -eq 0 ]]; then
 	sudo cp sshfs_start.sh /usr/bin/sshfs_start.sh
 	sudo cp sshfs_stop.sh /usr/bin/sshfs_stop.sh
 	echo "Generating SSH-keys with empty passphrase ..."
-	ssh-keygen -t rsa -N "" -f /home/picosafe/.ssh/id_rsa
+	ssh-keygen -t rsa -N "" -f /home/picosafe/.ssh/distantusb_rsa
 	echo "Installing expect for automated terminal interaction ..."
 	sudo apt-get -q -y install expect
 	sudo cp copy_keys.sh /usr/bin/copy_keys.sh
 	echo -e "\n\nEverything is installed.\nRebooting your picosafe to finalize the the setup.\n\nYou need to decrypt your picosafe with the webinterface after the reboot."
 	sudo shutdown -r now
+}
+
+wget -q --tries=10 --timeout=20 http://google.com
+if [[ $? -eq 0 ]]; then
+	install
 else
 	echo "You seem to be disconnected from the internet. If your host is on Mac OSX, share the internet-connection with the script 'internetsharing.sh'! Otherwise share the networkconnection accordingly to your operating system."
+	exit
 fi 
