@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['osx',['OSX',['../install_8sh.html#a374290e5dd571fb478dc0c62b08867fd',1,'install.sh']]]
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['removepicosafe_2ephp',['removePicosafe.php',['../remove_picosafe_8php.html',1,'']]]
 ];
