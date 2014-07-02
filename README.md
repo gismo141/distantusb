@@ -19,16 +19,6 @@ Der Benutzer kann per Webinterface die gewünschten [picosafe][]s hinzufügen. [
 
 [embedded-projects]: https://github.com/embeddedprojects
 [UniBwM]: http://www.unibw.de
-
-## Projektstruktur
-
-Das Projekt wird hauptsächlich in C++ geschrieben und mit [Doxygen][Doxygen] dokumentiert. Die entstehende Dokumentation kann unter den [GitHub-Pages][GitHub-Pages] eingesehen werden.
-
-das Projekt kann mit den jeweiligen `Makefiles` und dem korrekt installierten CC kompiliert werden.
-Momentan funktioniert die Kompilation nur unter MacOSX und dem CC von [Carlson-Minot][].
-
-**Der aktuelle Status der Projekte [Distant-USB][] und [picosafe][] kann unter dem [Entwicklungstagebuch](docs/Entwicklung.md) eingesehen werden**
-
 [Distant-USB]: https://www.github.com/gismo141/distantusb
 [Doxygen]: https://github.com/doxygen/doxygen
 [GitHub-Pages]: http://gismo141.github.io/distantusb/
